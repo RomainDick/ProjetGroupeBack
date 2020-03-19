@@ -22,4 +22,15 @@ public class TeamServiceImpl implements TeamService {
         return this.teamRepository.findById(id);
     }
 
+    public Team create(Team team) {
+        return this.teamRepository.save(team);
+    }
+
+    public Team update(Team team) {
+        return this.teamRepository.save(team);
+    }
+
+    public void delete(Team team) {
+        this.teamRepository.delete(team);
+    }
 }
