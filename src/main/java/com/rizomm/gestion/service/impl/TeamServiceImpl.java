@@ -18,18 +18,22 @@ public class TeamServiceImpl implements TeamService {
         this.teamRepository = teamRepository;
     }
 
-    public Optional<Team> findById(Long id) {
+    @Override
+    public Optional<Team> get(Long id) {
         return this.teamRepository.findById(id);
     }
 
+    @Override
     public Team create(Team team) {
         return this.teamRepository.save(team);
     }
 
+    @Override
     public Team update(Team team) {
         return this.teamRepository.save(team);
     }
 
+    @Override
     public void delete(Team team) {
         this.teamRepository.delete(team);
     }
